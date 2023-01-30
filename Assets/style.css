@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -18,6 +18,13 @@ textarea {
 
 .time-block {
   border-radius: 15px;
+}
+
+.savedMsg {
+  margin: 10px;
+  padding: 5px;
+  font-size: 18px;
+  color: purple;
 }
 
 .row {
