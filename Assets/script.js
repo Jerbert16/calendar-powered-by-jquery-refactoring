@@ -29,6 +29,12 @@ $(function () {
     }
   });
 
+  timeClrEl.each(function() {
+    let ids = "#" + $(this).attr("id");
+    let keyInput = $(this).attr("id");
+    $(ids).children().val(localStorage.getItem(keyInput));
+  })
+  
   function savedEventMsg() {
     let SavedMsg = todayIsTxt.append("<p>Event successfully saved!</p>");
     SavedMsg.children("p").addClass("savedMsg");
@@ -36,17 +42,4 @@ $(function () {
       $(".savedMsg").remove();
     }, 550);
   }
-
-  $("#hour-9").children().val(localStorage.getItem("hour-9"))
-  $("#hour-10").children().val(localStorage.getItem("hour-10"))
-  $("#hour-11").children().val(localStorage.getItem("hour-11"))
-  $("#hour-12").children().val(localStorage.getItem("hour-12"))
-  $("#hour-13").children().val(localStorage.getItem("hour-13"))
-  $("#hour-14").children().val(localStorage.getItem("hour-14"))
-  $("#hour-15").children().val(localStorage.getItem("hour-15"))
-  $("#hour-16").children().val(localStorage.getItem("hour-16"))
-  $("#hour-17").children().val(localStorage.getItem("hour-17"))
-    
 });
-
-
